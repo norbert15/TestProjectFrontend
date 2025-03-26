@@ -4,20 +4,26 @@ Ez egy egyszerű Angular alapú alkalmazás, amely két fő menüpontot tartalma
 
 ## Főbb Funkciók
 
-Bejelentkezés: A felhasználó admin/admin párossal tud bejelentkezni.
-Diákok Kezelése:
-Diákok listájának megtekintése.
+- Diákok menüpont:
+  - Diákok listájának megtekintése (sorszám, név, e-mail cím)
+  - Új diák felvétele (teljesnév, e-mail cím)
+  - Meglévő diák adatainak szerkesztése
+  - Diák eltávolítása
+ 
+- Bejelentkezés:
+  - Felhasználónév: admin
+  - Jelszó: admin
 
-Diákok szerkesztése és törlése.
+- Címek menüpont (Csak bejelentkezés után érhető el):
+  - Címek listájának megtekintése (sorszám, cím)
+  - Új cím felvétele vagy random cím generálása 
 
-Új diák hozzáadása.
+# A program használatához szükséges programok
 
-Címek Kezelése (Csak bejelentkezés után):
+A program futtatáshoz szükséges telepíteni:
 
-Címek listájának megtekintése.
+- **Node.js ^18.19.1 || ^20.11.1 || ^22.0.0 verziója**
+- **Angular CLI 18.2.14-as verziója**
+- **REST api: https://github.com/norbert15/TestProject**
 
-Új cím hozzáadása.
-
-Random cím generálása.
-
-## Telepítés és Futatás
+A telepített programok után a projekt fő könyvtárában telepíteni kell az alkalmazáshoz szükséges csomagokat: **npm install**
