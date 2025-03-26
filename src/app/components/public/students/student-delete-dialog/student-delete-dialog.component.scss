@@ -1,0 +1,17 @@
+.warning-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-weight: 700;
+}
+
+.warning-btns {
+  display: flex;
+  gap: 10px;
+
+  app-button {
+    width: 100%;
+  }
+}

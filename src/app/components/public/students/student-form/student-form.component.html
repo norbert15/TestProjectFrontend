@@ -1,0 +1,33 @@
+<app-button (buttonClick)="onOpenStudentFormDialogClick()"
+  >Új diák felvétele</app-button
+>
+
+<ng-template #studentFormTemplate>
+  <form
+    class="stretch h-100"
+    [formGroup]="studentFormGroup"
+    (ngSubmit)="onStudentSubmit()"
+  >
+    <div class="form-groups">
+      <app-input formControlName="name" label="Teljes neve"></app-input>
+      <app-input
+        formControlName="email"
+        label="E-mail címe"
+        class="mb"
+      ></app-input>
+    </div>
+
+    <div class="btn-groups">
+      <app-button color="transparent" (buttonClick)="closeDialog()">
+        Mégsem
+      </app-button>
+      <app-button
+        [isLoading]="isLoading()"
+        type="submit"
+        [disabled]="studentFormGroup.invalid"
+      >
+        {{ student() ? "Módosítás" : "Létrehozás" }}
+      </app-button>
+    </div>
+  </form>
+</ng-template>

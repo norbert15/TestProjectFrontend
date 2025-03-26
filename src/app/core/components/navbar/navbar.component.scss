@@ -1,0 +1,42 @@
+@use "../../../../assets/styles/sass/base/variables/colors" as c;
+
+header {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 4px #0000001a;
+  border-bottom: 1px solid #0000001a;
+  background-color: #ffffff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  font-weight: 700;
+  gap: 20px;
+
+  .navbar-items {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .navbar-item {
+    text-align: center;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+
+    &--active,
+    a:hover {
+      border-bottom: 2px solid c.$primary;
+      color: c.$primary;
+    }
+
+    a {
+      height: max-content;
+      padding-bottom: 10px;
+    }
+  }
+}

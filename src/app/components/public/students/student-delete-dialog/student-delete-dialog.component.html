@@ -1,0 +1,18 @@
+<ng-template #studentDeleteDialogTemplate>
+  <div class="stretch h-100">
+    <div class="warning-message">
+      Biztos abban eltávolitja a kiválasztott diákot?
+    </div>
+    <div class="warning-btns">
+      <app-button color="transparent" (buttonClick)="closeDialog()"
+        >Mégsem</app-button
+      >
+      <app-button
+        color="danger"
+        [isLoading]="isLoading()"
+        (buttonClick)="onDeleteStudentClick()"
+        >Eltávolítás</app-button
+      >
+    </div>
+  </div>
+</ng-template>

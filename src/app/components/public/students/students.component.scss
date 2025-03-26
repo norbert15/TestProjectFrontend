@@ -1,0 +1,14 @@
+app-table::ng-deep {
+  th,
+  td {
+    &:first-of-type {
+      width: 10%;
+      padding-left: 15px !important;
+    }
+
+    &:last-of-type {
+      width: 120px;
+      text-align: end;
+    }
+  }
+}

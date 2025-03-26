@@ -1,0 +1,7 @@
+$lgs: 1000px;
+
+@mixin desktop {
+  @media screen and (min-width: $lgs) {
+    @content;
+  }
+}

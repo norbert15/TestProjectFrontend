@@ -1,0 +1,28 @@
+<header>
+  <nav class="container">
+    <img width="30" src="./assets/images/angular-logo.png" alt="Angular logo" />
+    <img width="30" src="./assets/images/nestjs-logo.png" alt="Nest.js logo" />
+
+    <div class="navbar-items">
+      @for (navbarItem of navbarItems(); track navbarItem.routerLink) {
+        <div class="navbar-item">
+          <a
+            [routerLink]="navbarItem.routerLink"
+            [routerLinkActive]="['navbar-item--active']"
+            >{{ navbarItem.label }}</a
+          >
+        </div>
+      }
+    </div>
+
+    @if (!isAuthed()) {
+      <div class="navbar-item">
+        <a (click)="onOpenLoginFormDialog()" aria-hidden="true">
+          Bejelentkezés
+        </a>
+      </div>
+    }
+  </nav>
+</header>
+
+<app-login-form></app-login-form>

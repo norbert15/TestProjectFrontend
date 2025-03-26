@@ -1,0 +1,13 @@
+<app-address-form (addressCreate)="fetchAddresses()"></app-address-form>
+
+<div class="mb d-flex justify-content-between align-items-center">
+  <span class="headline-text-normal">Címek listája</span>
+</div>
+
+<app-table
+  appFade
+  [rows]="addressTableRows()"
+  [autoHeight]="true"
+  (loadMore)="onLoadExtraRowsScroll()"
+  [titles]="addressTableTitles"
+></app-table>

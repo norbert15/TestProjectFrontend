@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="mb headline-text-small">Új cím felvétele vagy generálása</div>
+  <app-input class="mb" label="Címe" [(ngModel)]="address"></app-input>
+
+  <div class="btn-groups">
+    <app-button color="secondary" (buttonClick)="onCreateAddressClick(true)">
+      Generálás
+    </app-button>
+    <app-button [disabled]="!address()" (buttonClick)="onCreateAddressClick()">
+      Létrehozás
+    </app-button>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+@use "assets/styles/sass/styles";
+
+html,
+body {
+  background-color: #e3edf7;
+  font-family: "zilla-slab", sans-serif !important;
+  font-weight: 500;
+  font-style: normal;
+  color: #474748;
+  height: 100vh;
+  line-height: 1.53;
+  overflow: hidden;
+}
+
+body {
+  margin: 0 !important;
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+  padding-top: 32px;
+  padding-bottom: 12px;
+}
+
+app-root,
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-icon {
+  cursor: pointer;
+  overflow: initial !important;
+  width: 16px !important;
+  height: 16px !important;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}

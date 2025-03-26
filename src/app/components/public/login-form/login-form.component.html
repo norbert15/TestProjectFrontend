@@ -1,0 +1,29 @@
+<ng-template #loginFormTemplate>
+  <form
+    [formGroup]="loginFormGroup"
+    (ngSubmit)="onLoginSubmit()"
+    class="stretch h-100"
+  >
+    <div class="form-groups">
+      <app-input formControlName="username" label="Felhasználónév"></app-input>
+      <app-input
+        formControlName="password"
+        type="password"
+        label="Jelszó"
+      ></app-input>
+    </div>
+
+    <div class="form-btns">
+      <app-button color="transparent" (buttonClick)="onCloseDialogClick()">
+        Mégsem
+      </app-button>
+      <app-button
+        type="submit"
+        [disabled]="loginFormGroup.invalid"
+        [isLoading]="isLoading()"
+      >
+        Bejelentkezés
+      </app-button>
+    </div>
+  </form>
+</ng-template>

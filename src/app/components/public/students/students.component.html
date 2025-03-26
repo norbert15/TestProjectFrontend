@@ -1,0 +1,24 @@
+<div class="mb d-flex justify-content-between align-items-center">
+  <span class="headline-text-normal">Diákok listája</span>
+  <app-student-form
+    [student]="selectedStudent()"
+    (studentSave)="fetchStudents()"
+    (studentDialogClose)="selectedStudent.set(null)"
+  ></app-student-form>
+</div>
+
+<div class="h-100">
+  <app-table
+    appFade
+    [rows]="studentTableRows()"
+    (loadMore)="onLoadExtraRowsScroll()"
+    [minWidth]="'700px'"
+    [autoHeight]="true"
+    [titles]="studentTableTitles"
+  ></app-table>
+</div>
+
+<app-student-delete-dialog
+  [(studentId)]="studentIdForDelete"
+  (studentDelete)="fetchStudents()"
+></app-student-delete-dialog>

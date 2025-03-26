@@ -1,0 +1,9 @@
+app-table::ng-deep {
+  th,
+  td {
+    &:first-of-type {
+      width: 30%;
+      padding-left: 15px !important;
+    }
+  }
+}

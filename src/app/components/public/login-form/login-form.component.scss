@@ -1,0 +1,19 @@
+:host {
+  display: none;
+}
+
+.form-groups {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex: 1;
+}
+
+.form-btns {
+  display: flex;
+  gap: 10px;
+
+  app-button {
+    width: 100%;
+  }
+}
